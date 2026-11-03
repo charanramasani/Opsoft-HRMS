@@ -28,7 +28,7 @@ function Login({
         {/* Company logo */}
         <div className="login-logo-container">
           <img
-            src="/opsoft-logo.png"
+            src={`${import.meta.env.BASE_URL}opsoft-logo.png`}
             alt="OpSoft Technologies Logo"
             className="login-company-logo"
           />

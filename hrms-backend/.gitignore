@@ -1,0 +1,28 @@
+gitignore
+# Maven build files
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Java compiled files
+*.class
+
+# Logs
+*.log
+
+# IDE files
+.vscode/
+.idea/
+.settings/
+.classpath
+.project
+
+# Local application configuration
+src/main/resources/application.properties
+
+# Environment variables
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,23 @@
+# React
+node_modules/
+dist/
+.env
+.env.*
+
+# Java / Maven
+target/
+*.class
+
+# IDE
+.vscode/
+.idea/
+.settings/
+.classpath
+.project
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

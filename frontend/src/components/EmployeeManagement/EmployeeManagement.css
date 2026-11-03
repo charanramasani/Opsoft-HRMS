@@ -1,0 +1,708 @@
+
+.employee-management {
+  width: 100%;
+  animation: employeeFadeIn 0.4s ease;
+}
+
+@keyframes employeeFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.employee-page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.employee-eyebrow {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.employee-page-heading h1 {
+  margin: 8px 0;
+  color: #172554;
+  font-size: 28px;
+}
+
+.employee-page-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.employee-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.employee-add-button,
+.employee-submit-button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.employee-add-button:hover,
+.employee-submit-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.employee-refresh-button {
+  padding: 11px 18px;
+  border: 1px solid #dbeafe;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.employee-refresh-button:hover {
+  background: #eff6ff;
+  transform: translateY(-2px);
+}
+
+.employee-summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: fit-content;
+  min-width: 220px;
+  padding: 20px 25px;
+  margin-bottom: 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+}
+
+.employee-summary-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #eff6ff;
+  font-size: 24px;
+}
+
+.employee-summary span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.employee-summary h2 {
+  margin: 4px 0 0;
+  color: #172554;
+  font-size: 25px;
+}
+
+/* Registration and Edit Forms */
+
+.employee-form-card,
+.employee-success-card,
+.employee-edit-card {
+  padding: 25px;
+  margin-bottom: 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+  animation: employeeFadeIn 0.3s ease;
+}
+
+.employee-form-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.employee-form-heading h2,
+.employee-success-card h2 {
+  margin: 0 0 7px;
+  color: #172554;
+  font-size: 20px;
+}
+
+.employee-form-heading p,
+.employee-success-card > p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.employee-close-button {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.employee-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.employee-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.employee-form-group label {
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.employee-form-group input,
+.employee-form-group select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  outline: none;
+  background: white;
+  color: #1e293b;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.employee-form-group input:focus,
+.employee-form-group select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.employee-form-note {
+  margin-top: 20px;
+  padding: 13px;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.employee-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.employee-cancel-button {
+  padding: 11px 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background: white;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.employee-cancel-button:hover {
+  background: #f1f5f9;
+}
+
+.employee-submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.employee-form-error {
+  padding: 12px;
+  margin-bottom: 17px;
+  border-radius: 8px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+/* Edit Employee */
+
+.employee-edit-card {
+  border-top: 4px solid #2563eb;
+}
+
+.employee-edit-button {
+  padding: 7px 13px;
+  border: 1px solid #bfdbfe;
+  border-radius: 7px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.employee-edit-button:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.employee-edit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.employee-update-success {
+  padding: 13px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #bbf7d0;
+  border-radius: 9px;
+  background: #f0fdf4;
+  color: #15803d;
+  font-size: 13px;
+  font-weight: 600;
+  animation: employeeFadeIn 0.3s ease;
+}
+
+/* Success and Credentials */
+
+.employee-success-card {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.employee-success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 17px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.employee-success-card > p {
+  margin-bottom: 20px;
+}
+
+.employee-credential-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 14px;
+  margin-top: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.employee-credential-row span {
+  color: #64748b;
+}
+
+.employee-credential-row strong {
+  color: #172554;
+  overflow-wrap: anywhere;
+}
+
+.temporary-password {
+  font-family: monospace;
+}
+
+.employee-copy-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: 1px solid #bfdbfe;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.employee-security-note {
+  margin: 13px 0 !important;
+  color: #b45309 !important;
+  font-size: 11px !important;
+}
+
+/* Employee Directory */
+
+.employee-table-card {
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
+}
+
+.employee-table-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.employee-table-heading h2 {
+  margin: 0 0 6px;
+  color: #172554;
+  font-size: 17px;
+}
+
+.employee-table-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.employee-search-input {
+  width: 270px;
+  max-width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  outline: none;
+  color: #1e293b;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.employee-search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.employee-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.employee-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.employee-data-table th {
+  padding: 15px 18px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.employee-data-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #475569;
+  font-size: 12px;
+}
+
+.employee-data-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.employee-id-cell {
+  color: #2563eb !important;
+  font-weight: 700;
+}
+
+.employee-role {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 6px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.employee-status {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.status-active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-inactive {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.employee-empty {
+  padding: 35px !important;
+  text-align: center;
+  color: #94a3b8 !important;
+}
+
+.employee-table-footer {
+  padding: 14px 20px;
+  border-top: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 11px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .employee-page-heading,
+  .employee-table-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .employee-header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .employee-search-input {
+    width: 100%;
+  }
+
+  .employee-page-heading h1 {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 550px) {
+  .employee-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-form-card,
+  .employee-success-card,
+  .employee-edit-card {
+    padding: 17px;
+  }
+
+  .employee-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .employee-form-actions button {
+    width: 100%;
+  }
+
+  .employee-credential-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Employee Status Management */
+
+.employee-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.employee-manage-status-button {
+  padding: 7px 11px;
+  border: 1px solid #c7d2fe;
+  border-radius: 7px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.employee-manage-status-button:hover {
+  background: #4338ca;
+  border-color: #4338ca;
+  color: #ffffff;
+}
+
+.employee-status-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(5px);
+}
+
+.employee-status-modal {
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 26px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
+  animation: employeeFadeIn 0.25s ease;
+}
+
+.employee-status-modal .employee-form-group {
+  margin-bottom: 18px;
+}
+
+.employee-status-modal .employee-form-heading {
+  margin-bottom: 24px;
+}
+
+.employee-status-select-group select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 13px;
+}
+
+.employee-status-select-group select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.employee-status-reason textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.employee-status-reason textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.employee-status-reason small {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.employee-status-information {
+  padding: 13px;
+  margin: 15px 0;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #1e40af;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.employee-status-information p {
+  margin: 5px 0 0;
+}
+
+/* Different status colours */
+
+.status-on-notice {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-resigned {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.status-terminated {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Responsive status popup */
+
+@media (max-width: 550px) {
+  .employee-status-modal {
+    padding: 18px;
+  }
+
+  .employee-action-buttons {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .employee-action-buttons button {
+    width: 100%;
+  }
+}
+
+
+.employee-history-button {
+    background: #eef2ff;
+    color: #3730a3;
+    border: 1px solid #c7d2fe;
+    padding: 8px 12px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.employee-history-button:hover {
+    background: #3730a3;
+    color: #ffffff;
+    border-color: #3730a3;
+}

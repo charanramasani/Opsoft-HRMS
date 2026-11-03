@@ -1,0 +1,272 @@
+
+.announcement-page {
+  padding: 28px;
+  color: #172033;
+}
+
+.announcement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.announcement-eyebrow {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.announcement-header h1 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.announcement-header p {
+  color: #64748b;
+}
+
+.announcement-primary-btn,
+.announcement-secondary-btn,
+.announcement-delete-btn {
+  border: none;
+  border-radius: 9px;
+  padding: 11px 17px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.announcement-primary-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.announcement-primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.announcement-secondary-btn {
+  background: #eef2ff;
+  color: #334155;
+}
+
+.announcement-delete-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.announcement-primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.announcement-alert {
+  padding: 13px 16px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.announcement-alert.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.announcement-alert.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.announcement-form {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+.announcement-form h2 {
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+.announcement-form label {
+  display: block;
+  font-weight: 600;
+  margin: 14px 0 7px;
+}
+
+.announcement-form input,
+.announcement-form textarea,
+.announcement-form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.announcement-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 20px;
+  margin-top: 12px;
+}
+
+.announcement-employee-selection {
+  margin-top: 22px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.announcement-employee-option {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+}
+
+.announcement-employee-option input {
+  width: auto;
+}
+
+.announcement-form-actions,
+.announcement-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.announcement-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.announcement-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
+}
+
+.announcement-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.announcement-category {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.announcement-status {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #e2e8f0;
+}
+
+.announcement-status.published {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.announcement-status.draft {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.announcement-card h2 {
+  font-size: 19px;
+  margin: 14px 0 10px;
+}
+
+.announcement-preview {
+  color: #64748b;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.announcement-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.announcement-empty {
+  padding: 55px 20px;
+  text-align: center;
+  color: #64748b;
+}
+
+.announcement-empty span {
+  font-size: 38px;
+}
+
+.announcement-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.announcement-modal {
+  position: relative;
+  background: white;
+  width: 100%;
+  max-width: 650px;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.announcement-modal h2 {
+  margin-top: 16px;
+}
+
+.announcement-modal-close {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  border: none;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.announcement-full-content {
+  white-space: pre-wrap;
+  line-height: 1.8;
+  color: #475569;
+}
+
+@media (max-width: 650px) {
+  .announcement-page {
+    padding: 16px;
+  }
+
+  .announcement-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .announcement-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
